@@ -46,11 +46,12 @@ else
 fi
 
 cd app
-dos2unix entrypoint.sh
-chmod +x entrypoint.sh
 
 echo "Pulling latest..."
 git pull
+
+dos2unix entrypoint.sh
+chmod +x entrypoint.sh
 
 echo "Starting app entrypoint.sh"
 ./entrypoint.sh
