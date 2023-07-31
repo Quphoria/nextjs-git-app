@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  nextjs_app:
+    container_name: nextjs_app
+    image: quphoria/nextjs-git-app
+    volumes:
+      - ./id_git:/id_git
+      - ./app:/app
+    environment:
+      - REPO_URL=[YOUR REPO URL]
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "1"
+    restart: unless-stopped
+
