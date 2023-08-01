@@ -59,6 +59,7 @@ chmod +x entrypoint.sh
 
 if [[ -f healthcheck.sh ]]; then
     dos2unix healthcheck.sh
+    chmod +x healthcheck.sh
 fi
 
 echo "Starting app entrypoint.sh"
