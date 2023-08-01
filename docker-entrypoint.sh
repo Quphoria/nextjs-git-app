@@ -57,5 +57,9 @@ git pull
 dos2unix entrypoint.sh
 chmod +x entrypoint.sh
 
+if [[ ! -f healthcheck.sh ]]; then
+    dos2unix healthcheck.sh
+fi
+
 echo "Starting app entrypoint.sh"
 ./entrypoint.sh

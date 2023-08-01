@@ -2,7 +2,7 @@ REM Change directory to script directory
 cd /D "%~dp0"
 
 SET BASETAG=quphoria/nextjs-git-app
-SET VERSION=v1.0.0
+SET VERSION=v1.0.1
 SET latest=1
 
 SET tag="%BASETAG%:%VERSION%"
