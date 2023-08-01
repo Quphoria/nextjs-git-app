@@ -31,6 +31,10 @@ if [[ "$HAS_SSH_KEY" -eq 1 ]]; then
     fi
 fi
 
+# fix git complaining about ownership of /app
+# fatal: detected dubious ownership in repository at '/app'
+git config --global --add safe.directory /app
+
 # check if the repo has been cloned
 if [[ "$(ls -A app)" ]]; then
     echo "/app not empty, please empty /app if you want the repository to be re-cloned"
