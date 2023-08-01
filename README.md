@@ -23,8 +23,8 @@ services:
     container_name: nextjs_app
     image: quphoria/nextjs-git-app
     volumes:
-      - id_git:/id_git
-      - app:/app
+      - ./id_git:/id_git
+      - ./app:/app
     environment:
       - REPO_URL=[YOUR REPO URL]
     logging:
