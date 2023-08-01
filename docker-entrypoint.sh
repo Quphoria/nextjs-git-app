@@ -57,7 +57,7 @@ git pull
 dos2unix entrypoint.sh
 chmod +x entrypoint.sh
 
-if [[ ! -f healthcheck.sh ]]; then
+if [[ -f healthcheck.sh ]]; then
     dos2unix healthcheck.sh
 fi
 
