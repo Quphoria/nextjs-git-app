@@ -34,3 +34,6 @@ services:
         max-file: "1"
     restart: unless-stopped
 ```
+
+The container supports a healthcheck script (`healthcheck.sh`) at the root of the repository (`/app`), where a non-zero exit code signals an unhealthy container  
+
