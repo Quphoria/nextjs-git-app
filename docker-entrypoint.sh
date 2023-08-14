@@ -34,6 +34,9 @@ fi
 # fix git complaining about ownership of /app
 # fatal: detected dubious ownership in repository at '/app'
 git config --global --add safe.directory /app
+if [[ ! -z "${REPO_EMAIL}" ]]; then
+    git config --global user.email "${REPO_EMAIL}"
+fi
 
 # check if the repo has been cloned
 if [[ "$(ls -A app)" ]]; then
@@ -52,7 +55,7 @@ fi
 cd app
 
 echo "Pulling latest..."
-git pull
+git pull --force
 
 dos2unix entrypoint.sh
 chmod +x entrypoint.sh

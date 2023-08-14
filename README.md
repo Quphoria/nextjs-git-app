@@ -27,6 +27,7 @@ services:
       - ./app:/app
     environment:
       - REPO_URL=[YOUR REPO URL]
+      - REPO_EMAIL=[KEY_COMMENT]
     logging:
       driver: "json-file"
       options:

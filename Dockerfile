@@ -23,6 +23,7 @@ EXPOSE 3000
 LABEL org.opencontainers.image.authors="quphoria.dev@gmail.com"
 
 ENV REPO_URL= \
+    REPO_EMAIL= \
     REPO_ACCESS_TOKEN=
 
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
